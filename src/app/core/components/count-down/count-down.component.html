@@ -1,0 +1,8 @@
+<div class="component_count_down">
+  <ng-container *ngFor="let item of date | countDown | async">
+    <div>
+      <p class="count_down">{{ item.value }}</p>
+      <p>{{ item.label }}</p>
+    </div>
+  </ng-container>
+</div>

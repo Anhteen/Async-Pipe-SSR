@@ -1,0 +1,10 @@
+<div
+  class="component_item_auction"
+  [ngClass]="{ item_auction_list: viewMode === 'list', item_auction_related: viewMode === 'related' }"
+>
+  <ng-container *ngIf="showCountDown">
+    <div class="status count_down">
+      <app-count-down [date]="auction?.startDate"></app-count-down>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,104 @@
+.component_item_auction {
+  background: #f8f8f8;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  .preview_image {
+    position: relative;
+    .box_image {
+      padding-bottom: calc(100% * 280 / 445);
+    }
+    .status {
+      position: absolute;
+      right: 0.625rem;
+      bottom: 0.625rem;
+      color: #ffffff;
+      > p {
+        font-size: 0.75rem;
+        margin-bottom: 0;
+        line-height: 1.5rem;
+        padding: 0 0.625rem 0 1.25rem;
+        position: relative;
+        background: #1e1e1e;
+        border-radius: 0.3125rem;
+        width: fit-content;
+        white-space: nowrap;
+        &::before {
+          content: '';
+          width: 0.375rem;
+          height: 0.375rem;
+          background: #ffffff;
+          position: absolute;
+          left: 0.625rem;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 100%;
+        }
+        &.enable {
+          background: #d8262a;
+        }
+      }
+    }
+  }
+  .infomation {
+    display: flex;
+    flex-direction: column;
+    padding: 0.875rem;
+    font-size: 0.875rem;
+    > a {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #1e1e1e;
+    }
+    p {
+      margin-bottom: 0.625rem;
+      line-height: 1.125rem;
+      color: #6c6c6c;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      span {
+        color: #d8262a;
+        font-weight: bold;
+      }
+    }
+    button.mat-raised-button {
+      padding: 0 1rem;
+      margin-left: auto;
+    }
+  }
+  &.item_auction_list,
+  &.item_auction_related {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr);
+    grid-gap: 0.375rem;
+    .preview_image {
+      .box_image {
+        padding-bottom: 0;
+        height: 100%;
+      }
+      .status.count_down {
+        right: 0;
+      }
+    }
+  }
+  &.item_auction_list {
+    background: #ffffff;
+    border: 0.0625rem solid #e8e8e8;
+    box-shadow: 0.125rem 0.1875rem 0.25rem rgba(0, 0, 0, 0.05);
+  }
+  &.item_auction_related {
+    background: transparent;
+    .preview_image {
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and(max-width: 575px) {
+  .component_item_auction.item_auction_list {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,10 @@
+<div class="component_earliest_auction" *ngIf="auction">
+  <div class="counter">
+    <ng-container *ngFor="let item of auction.startDate | countDown | async">
+      <div>
+        <p class="count_down">{{ item.value }}</p>
+        <p>{{ item.label }}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>

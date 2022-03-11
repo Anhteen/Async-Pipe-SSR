@@ -1,0 +1,21 @@
+.component_count_down {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2rem;
+  color: #ffffff;
+  padding: 0.625rem 0.875rem;
+  p {
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    &.count_down {
+      font-size: 1.125rem;
+      font-weight: bold;
+      line-height: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+}

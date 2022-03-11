@@ -1,0 +1,64 @@
+.component_earliest_auction {
+  padding: 1.875rem;
+  background: #ffffff;
+  box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.05);
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  text-align: center;
+  h5 {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: #1e1e1e;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  .counter {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 5rem;
+    margin-bottom: 1.375rem;
+    > div {
+      p {
+        margin-bottom: 0;
+        line-height: 1.125rem;
+        color: #8c8c8c;
+        &.count_down {
+          font-weight: bold;
+          font-size: 2.375rem;
+          line-height: 2.875rem;
+          text-align: center;
+          color: #1e1e1e;
+          margin-bottom: 0.625rem;
+        }
+      }
+    }
+  }
+  .infomation {
+    display: flex;
+    justify-content: space-between;
+    .price {
+      p {
+        margin-bottom: 0.625rem;
+        line-height: 1.125rem;
+        color: #6c6c6c;
+        span {
+          color: #d8262a;
+          font-weight: bold;
+        }
+      }
+    }
+    button {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}
+
+@media screen and(max-width: 575px) {
+  .component_earliest_auction {
+    padding: 1rem;
+    .counter {
+      grid-gap: 3rem;
+    }
+  }
+}

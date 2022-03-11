@@ -1,0 +1,31 @@
+<div class="component_home">
+  <div class="box_banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <app-earliest-auction [auction]="{ startDate: '2022-04-16T17:00:00.000Z' }"></app-earliest-auction>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home_main">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="main">
+            <div class="box_filter"></div>
+            <div class="box_auctions">
+              <ng-container *ngFor="let auction of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]">
+                <app-item-auction
+                  [auction]="{ startDate: '2022-04-16T17:00:00.000Z' }"
+                  [viewMode]="viewMode"
+                  [showCountDown]="true"
+                ></app-item-auction>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
